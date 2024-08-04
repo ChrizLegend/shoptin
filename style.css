@@ -1,0 +1,400 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+}
+
+#nav-bar{
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    font-size: 16px;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+}
+
+#nav-bar section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+#nav-bar section span{
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+#nav-bar section p{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#nav-bar section nav{
+    display: flex;
+    gap: 50px;
+}
+
+#nav-bar section nav a{
+    color: gray;
+    transition: 0.6s;
+}
+
+#nav-bar section nav :hover{
+    transform: scale(1.2);
+}
+
+#nav-bar section > a{
+    border: 1px solid black;
+    padding: 5px 12px;
+    color: gray;
+    transition: 0.6s;
+    text-transform: uppercase;
+}
+
+#nav-bar section > a:hover{
+    background-color: rgb(196, 79, 12);
+    color: white;
+    border: none;
+}
+
+
+#home-page{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: silver;
+    margin-bottom: 150px;
+}
+
+#home-page .left-div{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#home-page .left-div h1{
+    text-transform: uppercase;
+    font-size: 75px;
+    font-weight: 1000;
+    color: rgb(196, 79, 12);
+    animation: attract;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#home-page .left-div a{
+    font-weight: 400;
+    font-size: 25px;
+    color: black;
+    border: 2px solid gray;
+    padding: 7px 20px;
+    transition: 0.5s;
+    width: 38%;
+    text-align: center;
+}
+
+#home-page .left-div a:hover{
+    background-color: rgb(196, 79, 12);
+    color: white;
+    border: none;
+}
+ 
+
+
+#home-page .right-div{
+    margin-top: 100px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 80px;
+}
+
+#home-page .right-div > img{
+    width: 60%;   
+    transform: rotate(-27deg) scaleX(1); 
+}
+
+#home-page .right-div div{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+#home-page .right-div div img{
+    height: 80px;
+    object-fit: contain;
+    border: 1px solid gray;
+    padding: 10px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+#home-page .right-div div img:hover{
+    transform: scale(1.2);
+    border-color: rgb(196, 79, 12);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgb(196, 79, 12);
+}
+
+#home-page .right-div div img.active{
+    border-color: rgb(196, 79, 12);
+}
+
+#products {
+    width: 100%;
+    background-color: white;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding-top: 70px;
+}
+
+#products h2{
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 200;
+}
+
+#products article{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 100px;
+}
+
+#products article div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+#products article div small a{
+    width: 180px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid gray;
+    transition: 0.6s;   
+    color: gray;
+}
+
+#products article div small a img{
+    height: 60%;
+    object-fit: contain;
+}
+
+#products article div small a:hover{
+    transform: scale(1.3);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: rgb(196, 79, 12);
+    border: 1px solid rgb(196, 79, 12);
+}
+
+#order {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    
+}
+
+#order h2{
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 200;
+    margin-top: 30px;
+}
+
+#order div{
+    background-color: rgb(226, 222, 222);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    margin-top: 20px;
+}
+
+#order div .left-article{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#order div .left-article > img{
+    width: 400px;
+}
+
+#order div .left-article a{
+    width: 65%;
+    padding: 10px 20px;
+    border: 1px solid gray;
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    transition: 0.6s;
+}
+
+#order div .left-article a img{
+    margin-right: 20px;
+}
+
+#order div .left-article a:hover{
+    background-color: rgb(212, 133, 87);
+    color: white;
+   border: 1px solid rgb(212, 133, 87);
+}
+
+#order div .right-article{
+    width: 50%;
+    padding: 50px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+#order div .right-article h3{
+    color: rgb(235, 91, 7);
+    font-size: 25px;
+}
+
+#order div .right-article p{
+    font-size: 22px;
+    font-weight: 200;
+}
+
+#order div .right-article button{
+    font-size: 22px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    background-color:rgb(196, 79, 12);
+    border: none;
+    transition: 0.6s;
+}
+
+#order div .right-article button:hover{
+    background-color: black;
+    color: white;
+}
+
+#contact{
+    width: 100%;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+#contact h2{
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 200;
+    margin-bottom: 50px;
+}
+
+#contact div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+#contact div .background-img{
+    width: 40%;
+    height: 400px;
+    background-image: url(./images/map.png);
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.1;
+}
+
+#contact div .info-details{
+    width: 40%;
+}
+
+#contact div .info-details small{
+    width: 60%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+#contact div .info-details small address{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#contact div .info-details small address b{
+    color: rgb(196, 79, 12);
+    font-size: 24px;
+}
+
+footer{
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgb(226, 222, 222);
+}
+
+footer p{
+    font-size: 12px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes attract{
+    0%{
+        color: blue;
+    }
+    50%{
+        color: red;
+    }
+    100%{
+        color: rgb(235, 91, 7);
+    }
+}
+
